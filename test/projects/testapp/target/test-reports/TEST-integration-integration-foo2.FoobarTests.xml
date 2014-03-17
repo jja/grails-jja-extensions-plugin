@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="doppelbock" name="foo2.FoobarTests" tests="1" time="0.727" timestamp="2014-02-28T20:59:17">
+  <properties />
+  <testcase classname="foo2.FoobarTests" name="testAppendSimple" time="0.714" />
+  <system-out><![CDATA[--Output from testAppendSimple--
+expected = givenaddtl
+]]></system-out>
+  <system-err><![CDATA[--Output from testAppendSimple--
+]]></system-err>
+</testsuite>
