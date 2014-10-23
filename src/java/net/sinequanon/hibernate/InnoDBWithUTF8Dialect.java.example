@@ -1,0 +1,22 @@
+// copy this file to your Grails app as:
+//  src/java/net/sinequanon/hibernate/InnoDBWithUTF8Dialect.java
+// (this plugin does not require hibernate, so can't compile this class)
+
+package net.sinequanon.hibernate;
+
+/**
+ * specify this dialect in your Grails DataSource.groovy
+ * to get InnoDB tables with CHARSET utf8
+ *
+ * from http://grails.1312388.n4.nabble.com/findBy-method-is-case-insensitive-td1379303.html#a1379308
+ *
+ * @author John Allison
+ */
+public class InnoDBWithUTF8Dialect extends org.hibernate.dialect.MySQL5InnoDBDialect {
+
+    @Override
+    public String getTableTypeString() {
+        return super.getTableTypeString() + " DEFAULT CHARSET=utf8"; // + " COLLATE=utf8_bin";
+        }
+
+}
