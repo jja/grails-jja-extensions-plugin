@@ -150,8 +150,10 @@ class SortableTagLib {
             // we can set offset to the currently bottom row
             // except at offset 0, when we flip the complete list
             def offset = params.int('offset',0)
+            params.remove('offset')
             if (total && offset) {
-                linkParams.offset = total - offset + params.int('max',0)
+                offset = total - offset - params.int('max',0)
+                linkParams.offset = (offset > 0) ? offset : 0
             }
         }
         else {
